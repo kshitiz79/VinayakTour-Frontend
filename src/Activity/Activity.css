@@ -1,0 +1,197 @@
+/* Activities Slider Section */
+/* General Reset */
+body, html {
+  margin: 0;
+  padding-top: 800px;
+  font-family: 'Arial', sans-serif;
+  box-sizing: border-box;
+}
+ 
+/* Hero Section */
+.hero-section {
+  position: relative;
+  text-align: center;
+  height: 400px;
+  background: url('../images/activitybackground.png') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+}
+.hero-text{
+  padding-left: 200px;
+}
+.hero-section .hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-section .hero-text p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.activities-slider {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f7f7f7;
+}
+
+.activities-slider h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.slider-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.activity-slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.activity {
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 20px;
+  background: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+  position: relative; /* Position relative to place slider buttons inside */
+}
+
+.activity img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.activity h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.activity p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.activity button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.activity button:hover {
+  background-color: #0056b3;
+}
+
+/* Slider Controls */
+.slider-controls {
+  display: flex;
+  justify-content: space-between; /* Spread buttons out to the sides of the card */
+  position: absolute;
+  top: 50%; /* Vertically center the buttons */
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 10px;
+}
+
+.slider-controls button {
+  font-size: 1.5rem;
+  color: #007bff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s;
+}
+
+.slider-controls button:hover {
+  color: #0056b3;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 40px 20px;
+  background-color: #ffffff;
+}
+
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.feature {
+  flex: 1 1 calc(33.333% - 20px);
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+  background: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 300px;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feature {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  .activity {
+    min-width: 100%;
+  }
+
+  .hero-section .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-section .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .feature {
+    flex: 1 1 100%;
+  }
+
+  .hero-section .hero-text h1 {
+    font-size: 1.5rem;
+  }
+}

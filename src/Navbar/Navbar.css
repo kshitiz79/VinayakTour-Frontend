@@ -1,0 +1,139 @@
+/* Navbar Main Styles */
+.navbar-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed; /* Keeps navbar fixed at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000; /* Keeps navbar above other content */
+  background-color: white; 
+  width: 100%; /* Ensure navbar spans full width */
+ 
+}
+
+/* Logo Styles */
+.navbar-logo {
+  height: 80px;
+  width: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05); /* Logo grows slightly on hover */
+}
+
+/* Navbar Center - Items in the middle */
+.navbar-center {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-grow: 1; /* Allows it to grow and take up available space */
+  justify-content: center;
+}
+
+.navbar-icon {
+  height: 20px;
+  width: auto;
+  margin-right: 5px; /* Small margin between icon and text */
+}
+
+.navbar-center a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.navbar-center a:hover {
+  color: #007bff; /* Highlight color on hover */
+}
+
+/* Navbar End - Items aligned to the right */
+.navbar-end {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.navbar-end a {
+  text-decoration: none;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.navbar-end a:hover {
+  color: #007bff;
+}
+
+/* Sign in Button */
+.navbar-end button {
+  padding: 8px 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar-end button:hover {
+  background-color: #45a049;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Add padding to the body or main content to prevent overlap with fixed navbar */
+body {
+  margin: 0;
+  padding-top: 90px; /* Ensure content starts below the fixed navbar */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-main {
+    padding: 10px 20px;
+  }
+
+  .navbar-center {
+    gap: 15px;
+  }
+
+  .navbar-end {
+    gap: 15px;
+  }
+
+  .navbar-logo {
+    height: 40px;
+  }
+
+  .navbar-icon {
+    height: 18px;
+  }
+
+  .navbar-center a {
+    font-size: 14px;
+  }
+
+  .navbar-end a {
+    font-size: 14px;
+  }
+
+  .navbar-end button {
+    padding: 6px 14px;
+  }
+}
+
+/* Smooth transition for background color on scroll */
+.navbar-main.scrolled {
+  background-color: #f8f8f8;
+}

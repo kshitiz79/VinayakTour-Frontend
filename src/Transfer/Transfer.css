@@ -1,0 +1,142 @@
+.transfer-page {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  
+  margin: 0 auto;
+  
+  padding-left: 100px;
+  padding-top: 500px;
+}
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-top: 200px;
+  
+}
+
+.hero-image {
+  width: 100%;
+  height: 500px; /* Adjust as needed */
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.hero-text {
+  position: absolute;
+  
+  top: 90%; /* Center vertically */
+  left: 43%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Translate to adjust positioning */
+  z-index: 2; /* Ensure it appears above the image */
+  text-align: center;
+  width: 80%; /* Adjust width to avoid overflow */
+  padding: 20px;
+  /* Optional: Add a semi-transparent background for readability */
+  border-radius: 10px; /* Optional: Add rounded corners */
+}
+
+.hero-text h1 {
+  font-size: 3rem;
+  margin: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Add shadow for better contrast */
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-top: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+
+.why-choose {
+  
+  
+  background-color: #f4f4f4;
+  padding-top: 200px;
+}
+
+.features {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 50px;
+}
+
+.feature {
+  width: 30%;
+}
+
+.feature h3 {
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.feature p {
+  color: #666;
+}
+
+.fleet {
+  padding: 50px;
+  padding-left: 18px;
+}
+
+.car-list {
+  display: flex;
+  justify-content: space-around;
+  width: 1000px;
+  
+}
+
+.car {
+  width: 30%;
+  
+}
+
+.car img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.testimonials {
+  
+  background-color: #f9f9f9;
+}
+
+.testimonial {
+  margin-bottom: 20px;
+}
+
+.testimonial p {
+  font-style: italic;
+}
+
+.testimonial span {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.cta {
+  padding: 50px;
+  margin-right: 150px;
+  margin-bottom: 100px;
+  text-align: center;
+  background-color: #687e96;
+  color: white;
+}
+
+.cta-button {
+  padding: 15px 30px;
+  font-size: 1.25rem;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #555;
+}
