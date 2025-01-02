@@ -1,7 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import "./About.css";
 
 function About() {
+  const [formData, setFormData] = useState({ name: "", number: "", package: "" });
+  const [message, setMessage] = useState("");
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:4000/api/form", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json();
+      if (data.success) {
+        setMessage("Form submitted successfully!");
+      } else {
+        setMessage("Error submitting form. Please try again.");
+      }
+    } catch (error) {
+      setMessage("Error connecting to server.");
+    }
+  };
+
+
   return (
     <div className="about-page">
       <section className="about-header">
@@ -77,7 +107,54 @@ function About() {
         </div>
       </section>
       
+
+
+      <div className="about-section">
+          <h2>Contact Us</h2>
+          <form className="about-form" onSubmit={handleSubmit}>
+            <label>
+              Name:
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label>
+              Number:
+              <input
+                type="tel"
+                name="number"
+                value={formData.number}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <label>
+              Interested Package:
+              <input
+                type="text"
+                name="package"
+                value={formData.package}
+                onChange={handleChange}
+                required
+              />
+            </label>
+            <button type="submit">Submit</button>
+          </form>
+          {message && <p>{message}</p>}
+        </div>
+
+      
     </div>
+
+
+
+
+
+
   );
 }
 

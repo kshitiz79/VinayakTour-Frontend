@@ -162,6 +162,11 @@ const Holiday = () => {
     // Implement actual inquiry handling
   };
 
+
+
+
+
+
   const renderPackages = () => (
     <div className="packages">
       {Object.keys(packageData).map((key) => (
@@ -193,6 +198,9 @@ const Holiday = () => {
       ))}
     </div>
   );
+
+
+
 
   const renderPackageDetails = () => (
     <section className="details-section" ref={packageDetailsRef}>
@@ -230,6 +238,14 @@ const Holiday = () => {
           </div>
         </div>
       </section>
+      
+
+
+
+
+
+
+
 
       <section className="packages-section">
         <h2>Our Holiday Packages</h2>
