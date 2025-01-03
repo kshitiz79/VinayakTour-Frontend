@@ -1,28 +1,24 @@
-/* Footer container */
 .footer {
-  width: 100%; /* Full width */
-  padding: 20px 0; /* Vertical padding to give some space */
-  background-color: #333; /* Dark background for contrast */
-  color: white;
-  display: flex;
-  flex-direction: column; /* Stack content vertically */
-  align-items: center; /* Center items */
-  box-sizing: border-box; /* Include padding in width calculations */
-  position: relative; /* Ensure footer stays at the bottom */
-  z-index: 1; /* Keeps it above other content */
+  width: 100%;
+  background-color: #f8f8f8;
+  padding: 20px 0;
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
 }
 
-/* Footer content container */
 .footer-content {
-  width: 100%; /* Full width */
-  max-width: 1200px; /* Maximum width for large screens */
   display: flex;
-  justify-content: space-between;
-  padding: 20px; /* Padding around the content */
-  box-sizing: border-box; /* Ensure padding is included in the width */
-  margin: 0 auto; /* Center the content */
+  justify-content: space-around;
+  padding: 20px;
+  flex-wrap: wrap;
 }
 
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
 /* Left side of the footer */
 .footer-content-left {
   flex: 1;

@@ -12,8 +12,7 @@ html, body {
 .hero-section {
   position: relative;
   text-align: center;
-  padding: 150px 20px;
-  height: 600px; /* Set a fixed height */
+/* Set a fixed height */
   background-size: cover; /* Ensures the image covers the area */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Prevents tiling */
